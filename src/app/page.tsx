@@ -28,6 +28,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col overflow-hidden">
+      <link rel="canonical" href="https://brand-panther-eta.vercel.app/" />
       <Navbar />
       <Hero />
       <About />
