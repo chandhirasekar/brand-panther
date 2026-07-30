@@ -14,7 +14,7 @@ export function WhatYouGet() {
     { title: "Google Ads Support", highlight: false },
     { title: "Lead Tracking", highlight: false },
     { title: "Competitor Analysis", highlight: false },
-    { title: "Weekly Performance Reports", highlight: true },
+    { title: "Weekly Performance Reports", highlight: false },
   ];
 
   const rings = [
@@ -48,10 +48,10 @@ export function WhatYouGet() {
 
   return (
     <section id="services" className="pt-24 md:pt-32 pb-24 relative bg-[#050308]">
-      
+
       {/* Wrapper for Radial Animation to manage clipping properly */}
       <div className="relative w-full h-[400px] mb-16 hidden md:block">
-        
+
         {/* Orbital Rings (Clipped to top half) */}
         <div className="absolute inset-0 overflow-hidden">
           {rings.map((ring, rIdx) => (
@@ -60,14 +60,14 @@ export function WhatYouGet() {
               animate={{ rotate: 360 }}
               transition={{ duration: ring.duration, repeat: Infinity, ease: "linear" }}
               className="absolute bottom-0 left-1/2 -translate-x-1/2 rounded-full border-[1.5px] border-dashed border-white/10 flex items-center justify-center z-0"
-              style={{ 
-                width: `${ring.size}px`, 
+              style={{
+                width: `${ring.size}px`,
                 height: `${ring.size}px`,
                 marginBottom: `-${ring.size / 2}px`
               }}
             >
               {ring.icons.map((item, iIdx) => (
-                <div 
+                <div
                   key={iIdx}
                   className="absolute w-14 h-14"
                   style={{ transform: `rotate(${item.angle}deg) translateY(-${ring.size / 2}px)` }}
@@ -86,25 +86,25 @@ export function WhatYouGet() {
         </div>
 
         {/* Center Logo Area (Unclipped, sitting exactly at the orbital center) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20 flex flex-col items-center justify-center"
         >
-          <Image 
-            src="/brand-panther.png" 
-            alt="Brand Panther" 
-            width={250} 
-            height={80} 
+          <Image
+            src="/brand-panther.png"
+            alt="Brand Panther"
+            width={250}
+            height={80}
             className="h-20 md:h-28 w-auto object-contain drop-shadow-[0_0_20px_rgba(157,78,221,0.6)]"
           />
         </motion.div>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-20">
-        
+
         {/* Custom Title matching the exact screenshot */}
         <div className="text-center mx-auto mb-16 flex flex-col items-center">
           <p
@@ -118,7 +118,7 @@ export function WhatYouGet() {
             data-aos-delay="100"
             className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
           >
-            What You Get
+            Your Growth package
           </h2>
           <div
             data-aos="fade-up"

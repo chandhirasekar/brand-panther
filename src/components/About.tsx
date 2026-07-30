@@ -5,10 +5,10 @@ import { CheckCircle2 } from "lucide-react";
 
 export function About() {
   const benefits = [
-    "Attract qualified leads",
-    "Automate marketing",
-    "Create engaging content",
-    "Increase revenue",
+    "Predictable lead generation systems",
+    "Conversion-focused AI creatives",
+    "Scalable multi-platform campaigns",
+    "Transparent tracking and analytics",
   ];
 
   return (
@@ -43,7 +43,7 @@ export function About() {
             <div className="bg-[#0d0a14] border border-[#2a2438] rounded-3xl p-8 lg:p-12 relative overflow-hidden">
               <h3 className="text-3xl font-bold text-white mb-6">The Output</h3>
               <p className="text-xl text-white/80 mb-12">
-                Not six services on a menu — one connected engine. Every asset we create feeds the next stage.
+                One connected growth engine. Every asset we build feeds the next stage, from first click to final sale.
               </p>
               <div className="p-6 rounded-xl bg-black/50 border border-white/10 backdrop-blur-sm">
                 <p className="text-2xl md:text-3xl font-bold text-center">

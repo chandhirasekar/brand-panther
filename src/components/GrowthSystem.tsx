@@ -11,21 +11,21 @@ export function GrowthSystem() {
       title: "Create",
       subtitle: "BUILD THE ASSETS",
       icon: PenTool,
-      items: ["Branding", "Posters", "Videos", "AI Reels"],
+      outcome: "Scroll-stopping branding, posters & AI reels — ready in days.",
     },
     {
       num: "02",
       title: "Attract",
       subtitle: "DRIVE THE TRAFFIC",
       icon: Target,
-      items: ["Google", "Meta Ads", "Instagram", "Facebook"],
+      outcome: "Google + Meta campaigns that reach buyers, not just viewers.",
     },
     {
       num: "03",
       title: "Convert",
       subtitle: "CLOSE THE SALE",
       icon: MessageSquareCode,
-      items: ["WhatsApp", "Lead Tracking", "Reporting"],
+      outcome: "WhatsApp follow-up & lead tracking so nothing slips.",
     },
   ];
 
@@ -63,18 +63,13 @@ export function GrowthSystem() {
                 <h4 className="text-sm font-bold text-accent tracking-widest uppercase mb-2">
                   {step.subtitle}
                 </h4>
-                <h3 className="text-3xl font-bold text-white mb-6">
+                <h3 className="text-3xl font-bold text-white mb-4">
                   {step.title}
                 </h3>
                 
-                <ul className="space-y-3">
-                  {step.items.map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-white/80">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-white/80 leading-relaxed font-medium">
+                  {step.outcome}
+                </p>
               </motion.div>
             ))}
           </div>

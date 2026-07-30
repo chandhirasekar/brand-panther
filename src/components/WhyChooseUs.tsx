@@ -13,7 +13,7 @@ export function WhyChooseUs() {
     },
     {
       title: "Data-Driven Decisions",
-      description: "No guesswork. Every strategy is backed by analytics, ensuring your marketing budget delivers maximum ROI.",
+      description: "Every rupee is guided by analytics. We move budget toward what’s already converting — so your spend compounds, not guesses.",
       icon: TrendingUp,
     },
     {
@@ -28,6 +28,8 @@ export function WhyChooseUs() {
     },
   ];
 
+  const placeholderLogos = ["Client A", "Client B", "Client C", "Client D", "Client E"];
+
   return (
     <section className="py-24 relative bg-[#0a0a0a]">
       <div className="container mx-auto px-6 md:px-12">
@@ -36,7 +38,7 @@ export function WhyChooseUs() {
           subtitle="The Panther Advantage"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
           {reasons.map((reason, idx) => (
             <motion.div
               key={idx}
@@ -58,6 +60,35 @@ export function WhyChooseUs() {
             </motion.div>
           ))}
         </div>
+
+        {/* Client Logo Strip */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto border-t border-white/5 pt-12 text-center relative"
+        >
+          {/* Blurred Content */}
+          <div className="opacity-40 blur-md pointer-events-none select-none">
+            <p className="text-sm font-semibold text-white/40 uppercase tracking-widest mb-8">
+              Trusted by ambitious brands
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale">
+              {placeholderLogos.map((logo, idx) => (
+                <div key={idx} className="text-xl font-bold text-white">
+                  {logo}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Coming Soon Overlay */}
+          <div className="absolute inset-0 pt-12 flex justify-center items-center z-10 pointer-events-none">
+            <div className="px-5 py-2 border border-white/10 rounded-full bg-[#0a0a0a]/80 shadow-[0_0_30px_rgba(157,78,221,0.2)] backdrop-blur-md">
+              <p className="text-white font-bold tracking-[0.2em] uppercase text-xs">Coming Soon</p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

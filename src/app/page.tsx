@@ -8,10 +8,14 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { WhatYouGet } from "@/components/WhatYouGet";
+import { ClientReels } from "@/components/ClientReels";
 import { GrowthSystem } from "@/components/GrowthSystem";
+import { CampaignDashboards } from "@/components/CampaignDashboards";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { Testimonials } from "@/components/Testimonials";
 import { Pricing } from "@/components/Pricing";
 import { PackageIncludes } from "@/components/PackageIncludes";
+import { WebsiteDesign } from "@/components/WebsiteDesign";
 import { CTABanner } from "@/components/CTABanner";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -32,10 +36,14 @@ export default function Home() {
       <Hero />
       <About />
       <WhatYouGet />
+      <ClientReels />
       <GrowthSystem />
+      <CampaignDashboards />
       <WhyChooseUs />
+      <Testimonials />
       <Pricing />
       <PackageIncludes />
+      <WebsiteDesign />
       <CTABanner />
       <Contact />
       <Footer />

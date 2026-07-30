@@ -14,6 +14,7 @@ const gothic = UnifrakturMaguntia({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://brandpanther.org"),
   title: "Brand Panther | AI-Powered Growth Partner",
   description: "From first click to final sale. Brand Panther combines AI, creativity and performance marketing to help businesses attract qualified leads.",
   keywords: ["AI Marketing", "Growth Partner", "Performance Marketing", "Meta Ads", "Google Ads", "Digital Agency"],
@@ -21,11 +22,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Brand Panther | AI-Powered Digital Growth Partner",
     description: "From first click to final sale. Brand Panther combines AI, creativity and performance marketing to help businesses attract qualified leads and scale revenue.",
-    url: "https://brandpanther.ai",
+    url: "https://brandpanther.org",
     siteName: "Brand Panther",
     images: [
       {
-        url: "/brand-panther.png",
+        url: "/logo-mark.png",
         width: 1200,
         height: 630,
         alt: "Brand Panther - AI-Powered Digital Growth Partner",
@@ -38,12 +39,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Brand Panther | AI-Powered Digital Growth Partner",
     description: "From first click to final sale. Brand Panther combines AI, creativity and performance marketing to help businesses attract qualified leads and scale revenue.",
-    images: ["/brand-panther.png"],
+    images: ["/logo-mark.png"],
   },
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/brand-panther.png",
+    icon: "/logo-mark.png",
+    shortcut: "/logo-mark.png",
+    apple: "/logo-mark.png",
   },
 };
 

@@ -9,9 +9,7 @@ export function PackageIncludes() {
       title: "STRATEGY & REPORTING",
       items: [
         "Business Audit Included",
-        "Competitor Analysis",
         "Marketing Strategy Consultation",
-        "Weekly Performance Reports",
       ],
     },
     {
@@ -59,7 +57,7 @@ export function PackageIncludes() {
       <div className="container mx-auto px-6 md:px-12 max-w-6xl">
         <div className="text-center mb-16">
           <p className="text-accent uppercase tracking-widest text-sm font-semibold mb-4">What's Included</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">The Full Growth Process</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">Everything in Your ₹15,000/month</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

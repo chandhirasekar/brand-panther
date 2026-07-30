@@ -2,15 +2,14 @@
 
 import { Button } from "./ui/Button";
 import { motion } from "framer-motion";
-import CountUp from "react-countup";
 import Image from "next/image";
 import { ArrowRight, BarChart3, Target, Zap } from "lucide-react";
 
 export function Hero() {
   const stats = [
-    { value: 300, label: "Revenue Increase", suffix: "%" },
-    { value: 10, label: "Qualified Leads", suffix: "k+" },
-    { value: 95, label: "Client Retention", suffix: "%" },
+    { label: "AI creatives in 48h", icon: Zap },
+    { label: "Meta + Google in one place", icon: Target },
+    { label: "Weekly reports you can read", icon: BarChart3 },
   ];
 
   return (
@@ -70,7 +69,7 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
           >
             <Button size="lg" className="w-full sm:w-auto text-lg group" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              Start Free Audit
+              Free AI Business Audit
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -85,12 +84,11 @@ export function Hero() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/10"
           >
             {stats.map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2 flex items-center justify-center">
-                  <CountUp end={stat.value} duration={3} enableScrollSpy scrollSpyOnce />
-                  <span className="text-accent">{stat.suffix}</span>
+              <div key={idx} className="text-center flex flex-col items-center justify-center">
+                <div className="mb-3 p-3 bg-white/5 rounded-full">
+                  <stat.icon className="w-6 h-6 text-accent" />
                 </div>
-                <div className="text-white/60 uppercase tracking-wider text-sm font-semibold">
+                <div className="text-white/80 uppercase tracking-wider text-sm font-semibold max-w-[200px] mx-auto">
                   {stat.label}
                 </div>
               </div>

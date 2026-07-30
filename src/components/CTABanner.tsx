@@ -23,11 +23,14 @@ export function CTABanner() {
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">Scale?</span>
             </h2>
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Start with your FREE AI Business Audit and lock in the AI Growth Package — everything included for ₹15,000/month.
+              Start free. See exactly where your marketing leaks leads — then decide. The audit is yours whether or not you sign up.
             </p>
             <Button size="lg" withArrow onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               Start Free AI Business Audit
             </Button>
+            <p className="text-sm text-white/50 mt-6 font-medium tracking-wide">
+              Free · No obligation · 24-hour response
+            </p>
           </div>
         </motion.div>
       </div>
