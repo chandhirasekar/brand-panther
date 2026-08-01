@@ -1,11 +1,52 @@
 "use client";
 
+import { useState } from "react";
 import { SectionTitle } from "./ui/SectionTitle";
 import { Button } from "./ui/Button";
-import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageCircle, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "9f64087a-cef2-49f0-819c-650c49637f6d"); 
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus("success");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        console.error("Error", data);
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Error", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+      
+      if (submitStatus !== "error") {
+          setTimeout(() => {
+              setSubmitStatus("idle");
+          }, 3000);
+      }
+    }
+  };
+
   return (
     <section id="contact" className="py-24 relative bg-secondary/50">
       <div className="container mx-auto px-6 md:px-12">
@@ -77,28 +118,43 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             className="glass-card p-8"
           >
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label className="text-sm text-white/70">First Name</label>
-                  <input type="text" className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="John" />
+                  <label htmlFor="first_name" className="text-sm text-white/70">First Name</label>
+                  <input type="text" id="first_name" name="first_name" required className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="John" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm text-white/70">Last Name</label>
-                  <input type="text" className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="Doe" />
+                  <label htmlFor="last_name" className="text-sm text-white/70">Last Name</label>
+                  <input type="text" id="last_name" name="last_name" required className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="Doe" />
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-sm text-white/70">Email Address</label>
-                <input type="email" className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="john@company.com" />
+                <label htmlFor="email" className="text-sm text-white/70">Email Address</label>
+                <input type="email" id="email" name="email" required className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors" placeholder="john@company.com" />
               </div>
               <div className="space-y-2">
-                <label className="text-sm text-white/70">Message</label>
-                <textarea rows={4} className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Tell us about your business goals..."></textarea>
+                <label htmlFor="message" className="text-sm text-white/70">Message</label>
+                <textarea id="message" name="message" required rows={4} className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Tell us about your business goals..."></textarea>
               </div>
-              <Button type="submit" className="w-full mt-4 flex items-center justify-center gap-2">
-                Send Message <Send size={16} />
+              
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+              
+              <Button type="submit" disabled={isSubmitting} className="w-full mt-4 flex items-center justify-center gap-2">
+                {isSubmitting ? "Sending..." : "Send Message"} {!isSubmitting && <Send size={16} />}
               </Button>
+
+              {submitStatus === "success" && (
+                <div className="text-green-400 text-sm flex items-center justify-center gap-2 mt-4 bg-green-400/10 py-2 px-4 rounded-lg">
+                  <CheckCircle2 size={16} /> Message sent successfully! We'll get back to you soon.
+                </div>
+              )}
+              
+              {submitStatus === "error" && (
+                <div className="text-red-400 text-sm text-center mt-4 bg-red-400/10 py-2 px-4 rounded-lg">
+                  Something went wrong. Please try again later.
+                </div>
+              )}
             </form>
           </motion.div>
 
