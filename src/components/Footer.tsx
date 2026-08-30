@@ -67,8 +67,8 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-6">Contact</h4>
             <ul className="space-y-4 text-white/60">
-              <li>hello@brandpanther.org</li>
-              <li>+91 90254 30301</li>
+              <li>brandpanther.ai@gmail.com</li>
+              <li>+91 97880 30301</li>
               <li>Chennai, India</li>
             </ul>
           </div>

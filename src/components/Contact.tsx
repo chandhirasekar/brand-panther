@@ -69,27 +69,27 @@ export function Contact() {
             </p>
 
             <div className="space-y-6">
-              <a href="mailto:hello@brandpanther.org" className="flex items-center gap-4 group">
+              <a href="mailto:brandpanther.ai@gmail.com" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <Mail size={20} />
                 </div>
                 <div>
                   <p className="text-sm text-white/50 mb-1">Email Us</p>
-                  <p className="text-white font-medium group-hover:text-accent transition-colors">hello@brandpanther.org</p>
+                  <p className="text-white font-medium group-hover:text-accent transition-colors">brandpanther.ai@gmail.com</p>
                 </div>
               </a>
 
-              <a href="tel:+919025430301" className="flex items-center gap-4 group">
+              <a href="tel:+919788030301" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <Phone size={20} />
                 </div>
                 <div>
                   <p className="text-sm text-white/50 mb-1">Call Us</p>
-                  <p className="text-white font-medium group-hover:text-accent transition-colors">+91 90254 30301</p>
+                  <p className="text-white font-medium group-hover:text-accent transition-colors">+91 97880 30301</p>
                 </div>
               </a>
 
-              <a href="https://wa.me/919025430301" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+              <a href="https://wa.me/919788030301" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300">
                   <MessageCircle size={20} />
                 </div>

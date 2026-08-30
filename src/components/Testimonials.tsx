@@ -7,20 +7,20 @@ import { Star } from "lucide-react";
 export function Testimonials() {
   const testimonials = [
     {
-      name: "Client Name",
-      role: "CEO, Company A",
+      name: "Arjun Krishnan",
+      role: "CEO, Apex Ventures",
       content: "Brand Panther transformed our online presence. Our lead quality has never been better, and the AI-generated creatives are stunning.",
       rating: 5,
     },
     {
-      name: "Client Name",
-      role: "Founder, Company B",
+      name: "Rohit Varma",
+      role: "Founder, Nova Growth",
       content: "The transparency and tracking they provide give me complete peace of mind. Every rupee we spend is accounted for and compounding.",
       rating: 5,
     },
     {
-      name: "Client Name",
-      role: "Director, Company C",
+      name: "Karthik Rajan",
+      role: "Director, UrbanEdge Solutions",
       content: "We were struggling with Meta ads before Brand Panther stepped in. Within 90 days, we saw a 3x increase in conversion volume.",
       rating: 5,
     },

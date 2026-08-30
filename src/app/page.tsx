@@ -13,7 +13,6 @@ import { GrowthSystem } from "@/components/GrowthSystem";
 import { CampaignDashboards } from "@/components/CampaignDashboards";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Testimonials } from "@/components/Testimonials";
-import { Pricing } from "@/components/Pricing";
 import { PackageIncludes } from "@/components/PackageIncludes";
 import { WebsiteDesign } from "@/components/WebsiteDesign";
 import { CTABanner } from "@/components/CTABanner";
@@ -42,7 +41,6 @@ export default function Home() {
       <CampaignDashboards />
       <WhyChooseUs />
       <Testimonials />
-      <Pricing />
       <PackageIncludes />
       <WebsiteDesign />
       <CTABanner />
