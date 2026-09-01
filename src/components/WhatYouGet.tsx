@@ -6,15 +6,15 @@ import Image from "next/image";
 
 export function WhatYouGet() {
   const features = [
-    { title: "AI Marketing Strategy", highlight: false },
-    { title: "AI Content Creation", highlight: false },
-    { title: "AI Reel Creation", highlight: false },
-    { title: "Performance Marketing", highlight: false },
-    { title: "Meta Ads Management", highlight: false },
-    { title: "Google Ads Support", highlight: false },
-    { title: "Lead Tracking", highlight: false },
-    { title: "Competitor Analysis", highlight: false },
-    { title: "Weekly Performance Reports", highlight: false },
+    { title: "AI Marketing Strategy", description: "A clear monthly plan based on your goals, audience, and competitors." },
+    { title: "AI Content Creation", description: "Posters, captions, and creatives made for your brand, every month." },
+    { title: "AI Reel Creation", description: "Short-form reels built to stop the scroll and earn saves and shares." },
+    { title: "Meta Ads Management", description: "Facebook & Instagram campaigns set up, tested, and optimised." },
+    { title: "Google Ads Support", description: "Search & display campaigns to catch people already looking for you." },
+    { title: "Lead Tracking", description: "Every enquiry captured and followed up, so nothing slips." },
+    { title: "Competitor Analysis", description: "We show you what's working for others in your space." },
+    { title: "WhatsApp Follow-up", description: "Leads reach you directly and get answered fast." },
+    { title: "Weekly Performance Reports", description: "Simple reports showing spend, leads, and cost per lead." },
   ];
 
   const rings = [
@@ -22,7 +22,7 @@ export function WhatYouGet() {
       size: 350,
       duration: 30, // 30 seconds for one full orbit
       icons: [
-        { icon: Users, angle: 0, color: "text-[#9d4edd]" },
+        { icon: Users, angle: 0, color: "text-accent" },
         { icon: CheckCircle2, angle: 180, color: "text-white" },
       ]
     },
@@ -31,7 +31,7 @@ export function WhatYouGet() {
       duration: 45,
       icons: [
         { icon: FolderOpen, angle: 45, color: "text-white" },
-        { icon: Monitor, angle: 165, color: "text-[#9d4edd]" },
+        { icon: Monitor, angle: 165, color: "text-accent" },
         { icon: Magnet, angle: 285, color: "text-white" },
       ]
     },
@@ -39,9 +39,9 @@ export function WhatYouGet() {
       size: 750,
       duration: 60,
       icons: [
-        { icon: UserPlus, angle: 90, color: "text-[#9d4edd]" },
+        { icon: UserPlus, angle: 90, color: "text-accent" },
         { icon: Store, angle: 210, color: "text-white" },
-        { icon: ShoppingBag, angle: 330, color: "text-[#9d4edd]" },
+        { icon: ShoppingBag, angle: 330, color: "text-accent" },
       ]
     }
   ];
@@ -109,26 +109,26 @@ export function WhatYouGet() {
         <div className="text-center mx-auto mb-16 flex flex-col items-center">
           <p
             data-aos="fade-up"
-            className="text-[#ff0000] uppercase tracking-widest text-xs md:text-sm font-bold mb-4"
+            className="text-accent uppercase tracking-widest text-xs md:text-sm font-bold mb-4"
           >
-            THE ARSENAL
+            Everything your marketing needs, run by one team
           </p>
           <h2
             data-aos="fade-up"
             data-aos-delay="100"
             className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
           >
-            Your Growth package
+            What We Do
           </h2>
           <div
             data-aos="fade-up"
             data-aos-delay="200"
-            className="h-1 bg-[#ff0000] w-24 mx-auto"
+            className="h-1 bg-accent w-24 mx-auto"
           />
         </div>
 
         {/* 3x3 Grid of features */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
@@ -136,14 +136,17 @@ export function WhatYouGet() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-[#0f0a18] border border-white/5 rounded-2xl p-5 flex items-center gap-4 hover:border-white/10 transition-colors shadow-lg shadow-black/50 group"
+              className="bg-[#0f0a18] border border-white/5 rounded-2xl p-6 flex flex-col items-start gap-3 hover:border-white/10 transition-colors shadow-lg shadow-black/50 group"
             >
-              <div className="flex-shrink-0">
-                <CheckCircle2 className="w-5 h-5 text-[#ff0000] group-hover:scale-110 transition-transform" />
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <h4 className="text-lg font-medium text-white">
+                  {feature.title}
+                </h4>
               </div>
-              <h4 className={`text-base font-medium ${feature.highlight ? 'text-[#ff0000]' : 'text-white'}`}>
-                {feature.title}
-              </h4>
+              <p className="text-white/60 text-sm leading-relaxed pl-8">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>

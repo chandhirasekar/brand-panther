@@ -1,59 +1,40 @@
 "use client";
 
 import { SectionTitle } from "./ui/SectionTitle";
-import { CheckCircle2 } from "lucide-react";
+import { ShoppingBag, GraduationCap, Stethoscope, Store } from "lucide-react";
 
 export function About() {
-  const benefits = [
-    "Predictable lead generation systems",
-    "Conversion-focused AI creatives",
-    "Scalable multi-platform campaigns",
-    "Transparent tracking and analytics",
+  const clientTypes = [
+    { icon: ShoppingBag, label: "Fashion Labels" },
+    { icon: GraduationCap, label: "Training Centres" },
+    { icon: Stethoscope, label: "Clinics" },
+    { icon: Store, label: "Retail Stores" },
   ];
 
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-24 relative bg-[#0a0a0a]">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
-          <div data-aos="fade-right">
-            <SectionTitle 
-              title="Building Growth Systems" 
-              subtitle="About Us"
-              align="left"
-              className="mb-8"
-            />
-            <p className="text-lg text-white/70 mb-8 leading-relaxed">
-              We don't just run ads or make posts. From AI-generated creatives to intelligent advertising and analytics, we build complete growth systems that deliver measurable business results from the first click to the final sale.
-            </p>
-            
-            <div className="space-y-4">
-              {benefits.map((benefit, idx) => (
-                <div key={idx} className="flex items-center gap-4">
-                  <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-accent" />
-                  </div>
-                  <span className="text-white/90 font-medium">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        <SectionTitle 
+          title="Who We Work With" 
+          subtitle="Is this for me?"
+        />
+        
+        <div className="max-w-4xl mx-auto text-center mt-12">
+          <p className="text-xl text-white/80 leading-relaxed mb-8">
+            We work with local and growing businesses across Chennai — fashion labels, training centres, clinics, retail stores, and service businesses — that want a steady flow of enquiries instead of one-off posts. 
+          </p>
+          <p className="text-xl text-accent font-semibold mb-16">
+            If you're spending on ads without knowing what's working, or posting without getting leads, this is built for you.
+          </p>
 
-          <div data-aos="fade-left" className="relative">
-            <div className="bg-[#0d0a14] border border-[#2a2438] rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-              <h3 className="text-3xl font-bold text-white mb-6">The Output</h3>
-              <p className="text-xl text-white/80 mb-12">
-                One connected growth engine. Every asset we build feeds the next stage, from first click to final sale.
-              </p>
-              <div className="p-6 rounded-xl bg-black/50 border border-white/10 backdrop-blur-sm">
-                <p className="text-2xl md:text-3xl font-bold text-center">
-                  <span className="text-white">QUALIFIED LEADS.</span><br/>
-                  <span className="text-accent">MEASURABLE REVENUE.</span>
-                </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {clientTypes.map((type, idx) => (
+              <div key={idx} className="bg-black/50 border border-white/5 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:border-white/10 transition-colors">
+                <type.icon className="w-8 h-8 text-white/50" />
+                <span className="text-white/80 font-medium">{type.label}</span>
               </div>
-            </div>
+            ))}
           </div>
-
         </div>
       </div>
     </section>

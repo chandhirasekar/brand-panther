@@ -7,9 +7,9 @@ import { ArrowRight, BarChart3, Target, Zap } from "lucide-react";
 
 export function Hero() {
   const stats = [
-    { label: "AI creatives in 48h", icon: Zap },
-    { label: "Meta + Google in one place", icon: Target },
-    { label: "Weekly reports you can read", icon: BarChart3 },
+    { label: "Content and reels made for you every month", icon: Zap },
+    { label: "Meta + Google ads, managed in one place", icon: Target },
+    { label: "Weekly reports in plain language", icon: BarChart3 },
   ];
 
   return (
@@ -46,9 +46,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
-              FROM <span className="text-white/60 italic">FIRST CLICK</span><br />
-              TO <span className="text-accent">FINAL SALE.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
+              We Bring You <span className="text-accent">Qualified Leads.</span><br />
+              You Focus On <span className="text-white/60 italic">Closing Them.</span>
             </h1>
           </motion.div>
 
@@ -57,8 +57,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="text-xl md:text-2xl text-white/70 mb-12 uppercase tracking-widest font-semibold">
-              AI-Powered Digital Growth Partner
+            <p className="text-lg md:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Brand Panther is a Chennai-based digital marketing team. We create your content, run your Meta and Google ads, and track every lead — so your marketing brings qualified leads, not just likes.
             </p>
           </motion.div>
 
@@ -66,29 +66,29 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
+            className="flex flex-col items-center justify-center mb-20"
           >
-            <Button size="lg" className="w-full sm:w-auto text-lg group" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              Free AI Business Audit
+            <Button size="lg" className="w-full sm:w-auto text-lg group mb-4" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              Get Your Free Business Audit
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-              View Packages
-            </Button>
+            <p className="text-sm text-white/50 text-center max-w-sm">
+              No cost, no obligation. We show you where your enquiries are leaking before you decide anything.
+            </p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/10"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/10 w-full"
           >
             {stats.map((stat, idx) => (
               <div key={idx} className="text-center flex flex-col items-center justify-center">
                 <div className="mb-3 p-3 bg-white/5 rounded-full">
                   <stat.icon className="w-6 h-6 text-accent" />
                 </div>
-                <div className="text-white/80 uppercase tracking-wider text-sm font-semibold max-w-[200px] mx-auto">
+                <div className="text-white/80 uppercase tracking-wider text-sm font-semibold max-w-[250px] mx-auto">
                   {stat.label}
                 </div>
               </div>

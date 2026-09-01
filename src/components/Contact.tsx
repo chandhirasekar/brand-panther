@@ -63,9 +63,9 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-3xl font-bold text-white mb-6">Let's build your growth system.</h3>
+            <h3 className="text-3xl font-bold text-white mb-6">Ready to Start? Get a Free Business Audit</h3>
             <p className="text-white/70 mb-10 leading-relaxed">
-              Tell us about your business. We’ll send back a free audit showing where you’re losing leads — usually within 24 hours.
+              Tell us about your business. Within 24 hours we'll send back a free audit showing where you're losing enquiries — whether or not you work with us.
             </p>
 
             <div className="space-y-6">
@@ -79,17 +79,17 @@ export function Contact() {
                 </div>
               </a>
 
-              <a href="tel:+919788030301" className="flex items-center gap-4 group">
+              <a href="tel:+919024530301" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <Phone size={20} />
                 </div>
                 <div>
                   <p className="text-sm text-white/50 mb-1">Call Us</p>
-                  <p className="text-white font-medium group-hover:text-accent transition-colors">+91 97880 30301</p>
+                  <p className="text-white font-medium group-hover:text-accent transition-colors">+91 90245 30301</p>
                 </div>
               </a>
 
-              <a href="https://wa.me/919788030301" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+              <a href="https://wa.me/919024530301" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300">
                   <MessageCircle size={20} />
                 </div>

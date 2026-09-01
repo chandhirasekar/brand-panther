@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Brand Panther",
     images: [
       {
-        url: "/logo-mark.png",
+        url: "/brand-panther.png",
         width: 1200,
         height: 630,
         alt: "Brand Panther - AI-Powered Digital Growth Partner",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Brand Panther | AI-Powered Digital Growth Partner",
     description: "From first click to final sale. Brand Panther combines AI, creativity and performance marketing to help businesses attract qualified leads and scale revenue.",
-    images: ["/logo-mark.png"],
+    images: ["/brand-panther.png"],
   },
   icons: {
     icon: "/logo-mark.png",

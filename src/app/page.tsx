@@ -31,19 +31,17 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col overflow-hidden">
-      <link rel="canonical" href="https://brand-panther-eta.vercel.app/" />
+      <link rel="canonical" href="https://brandpanther.org" />
       <Navbar />
       <Hero />
       <About />
       <WhatYouGet />
-      <ClientReels />
       <GrowthSystem />
-      <CampaignDashboards />
-      <WhyChooseUs />
-      <Testimonials />
-      <PackageIncludes />
+      <ClientReels />
       <WebsiteDesign />
-      <CTABanner />
+      <CampaignDashboards />
+      <PackageIncludes />
+      <Testimonials />
       <Contact />
       <Footer />
     </main>

@@ -43,11 +43,11 @@ export function Navbar() {
         {/* Left: Logo */}
         <div className="flex-1 flex justify-start">
           <a href="#home" className="flex items-center gap-3 group shrink-0">
-            <Image 
-              src="/brand-panther.png" 
-              alt="Brand Panther Logo" 
-              width={100} 
-              height={100} 
+            <Image
+              src="/brand-panther.png"
+              alt="Brand Panther Logo"
+              width={100}
+              height={100}
               className="h-12 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform"
               priority
             />
@@ -64,7 +64,7 @@ export function Navbar() {
         <nav
           className={cn(
             "hidden md:flex items-center gap-8 px-8 py-2 transition-all duration-500",
-            isScrolled ? "bg-[#1a1423] rounded-full border border-transparent" : "bg-transparent border border-transparent"
+            // isScrolled ? "bg-[#1a1423] rounded-full border border-transparent" : "bg-transparent border border-transparent"
           )}
         >
           {navLinks.map((link) => (

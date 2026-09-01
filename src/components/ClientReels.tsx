@@ -6,18 +6,21 @@ import { Play } from "lucide-react";
 
 export function ClientReels() {
   const reels = [
-    { title: "Client Reel 1", views: "1.2M Views" },
-    { title: "Client Reel 2", views: "800K Views" },
-    { title: "Client Reel 3", views: "2.5M Views" }
+    { title: "Client Reel 1", category: "Client Category" },
+    { title: "Client Reel 2", category: "Client Category" },
+    { title: "Client Reel 3", category: "Client Category" }
   ];
 
   return (
     <section className="py-24 relative bg-[#050308]">
       <div className="container mx-auto px-6 md:px-12">
         <SectionTitle 
-          title="Viral AI Reels" 
+          title="Our Work — Reels & Creatives" 
           subtitle="Real Results"
         />
+        <p className="text-gray-400 text-center max-w-3xl mx-auto -mt-8 mb-12 text-lg">
+          We create reels and posters using AI tools combined with human editing and Tamil-first scripting. Here's some of what we've made for our clients.
+        </p>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {reels.map((reel, idx) => (
@@ -37,17 +40,17 @@ export function ClientReels() {
                 <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-[50px]" />
               </div>
               
-              {/* Blur Overlay & Coming Soon */}
-              <div className="absolute inset-0 backdrop-blur-xl bg-black/40 flex flex-col justify-center items-center z-20">
-                <div className="px-6 py-3 border border-white/10 rounded-full bg-black/60 shadow-[0_0_30px_rgba(157,78,221,0.2)]">
-                  <p className="text-white font-bold tracking-[0.2em] uppercase text-sm">Coming Soon</p>
+              {/* Play icon overlay */}
+              <div className="absolute inset-0 flex flex-col justify-center items-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                  <Play className="w-6 h-6 text-white ml-1" />
                 </div>
               </div>
 
               {/* Content overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-30 opacity-50">
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-30">
                 <div className="bg-white/10 backdrop-blur-md rounded-lg px-3 py-1 inline-block mb-2 border border-white/10">
-                  <span className="text-accent text-xs font-bold">{reel.views}</span>
+                  <span className="text-accent text-xs font-bold">{reel.category}</span>
                 </div>
                 <h4 className="text-white font-semibold text-lg">{reel.title}</h4>
               </div>

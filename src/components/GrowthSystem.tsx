@@ -1,78 +1,99 @@
 "use client";
 
 import { SectionTitle } from "./ui/SectionTitle";
-import { PenTool, Target, MessageSquareCode } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function GrowthSystem() {
   const steps = [
     {
       num: "01",
-      title: "Create",
-      subtitle: "BUILD THE ASSETS",
-      icon: PenTool,
-      outcome: "Scroll-stopping branding, posters & AI reels — ready in days.",
+      title: "AI Business & Competitor Audit",
+      description: "Business analysis and competitor insights.",
     },
     {
       num: "02",
-      title: "Attract",
-      subtitle: "DRIVE THE TRAFFIC",
-      icon: Target,
-      outcome: "Google + Meta campaigns that reach buyers, not just viewers.",
+      title: "Onboarding & Growth Strategy",
+      description: "Goals, audience, brand, and offer mapping.",
     },
     {
       num: "03",
-      title: "Convert",
-      subtitle: "CLOSE THE SALE",
-      icon: MessageSquareCode,
-      outcome: "WhatsApp follow-up & lead tracking so nothing slips.",
+      title: "Monthly Social Media Planner",
+      description: "Content calendar and campaign planning.",
+    },
+    {
+      num: "04",
+      title: "AI-Powered Content Creation",
+      description: "Social creatives, reels, and ad content.",
+    },
+    {
+      num: "05",
+      title: "Meta Ads Setup & Launch",
+      description: "Audience targeting and campaign setup.",
+    },
+    {
+      num: "06",
+      title: "Lead Generation",
+      description: "Meta lead ads, WhatsApp, and website leads.",
+    },
+    {
+      num: "07",
+      title: "Lead Tracking & Conversion",
+      description: "Qualification, follow-up, and conversion.",
+    },
+    {
+      num: "08",
+      title: "Performance Analysis & Optimisation",
+      description: "Reporting and continuous optimisation.",
     },
   ];
 
   return (
-    <section id="system" className="py-24 relative">
+    <section id="system" className="py-24 relative bg-[#0a0514]">
       <div className="container mx-auto px-6 md:px-12">
         <SectionTitle 
-          title="The Growth System" 
-          subtitle="How It Works"
+          title="How It Works" 
+          subtitle="The 8-Step System"
         />
 
-        <div className="max-w-6xl mx-auto relative mt-16">
-          {/* Connector Line (Desktop) */}
-          <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-y-1/2 z-0" />
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <p className="text-xl text-white/80 leading-relaxed font-medium">
+            We run all eight stages for you — under one roof.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
-            {steps.map((step, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
-                className="glass-card p-8 bg-secondary/90 relative overflow-hidden group"
-              >
-                {/* Large Background Number */}
-                <div className="absolute -top-6 -right-6 text-8xl font-black text-white/5 group-hover:text-white/10 transition-colors duration-500 pointer-events-none select-none">
-                  {step.num}
-                </div>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative z-10">
+          {steps.map((step, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="bg-[#111] border border-white/5 rounded-2xl p-6 relative overflow-hidden group hover:border-accent/50 transition-colors"
+            >
+              <div className="absolute -top-4 -right-4 text-7xl font-black text-white/5 group-hover:text-accent/10 transition-colors duration-500 pointer-events-none select-none">
+                {step.num}
+              </div>
+              
+              <div className="text-accent font-bold text-lg mb-4">
+                Step {step.num}
+              </div>
+              
+              <h3 className="text-lg font-bold text-white mb-2 leading-snug">
+                {step.title}
+              </h3>
+              
+              <p className="text-white/60 text-sm leading-relaxed">
+                {step.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
 
-                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <step.icon size={28} />
-                </div>
-                
-                <h4 className="text-sm font-bold text-accent tracking-widest uppercase mb-2">
-                  {step.subtitle}
-                </h4>
-                <h3 className="text-3xl font-bold text-white mb-4">
-                  {step.title}
-                </h3>
-                
-                <p className="text-white/80 leading-relaxed font-medium">
-                  {step.outcome}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+        <div className="max-w-3xl mx-auto text-center mt-16 pt-12 border-t border-white/10">
+          <p className="text-lg text-white/60 italic">
+            Ask any other agency — do they run all eight under one roof?
+          </p>
         </div>
       </div>
     </section>
