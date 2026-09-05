@@ -22,7 +22,7 @@ export function Navbar() {
     { name: "Home", href: "#home" },
     { name: "Services", href: "#services" },
     { name: "System", href: "#system" },
-    { name: "Package", href: "#package" },
+    { name: "Contact Us", href: "#contact" },
   ];
 
   return (
@@ -52,8 +52,11 @@ export function Navbar() {
               priority
             />
             <span
-              className="font-gothic text-2xl md:text-3xl tracking-wide text-white group-hover:text-accent transition-colors"
-              style={{ textShadow: "0 0 15px rgba(255,255,255,0.2)" }}
+              className="text-2xl md:text-3xl tracking-wide text-white group-hover:text-accent transition-colors"
+              style={{
+                fontFamily: "'Chomsky', var(--font-gothic), serif",
+                textShadow: "0 0 15px rgba(255,255,255,0.2)"
+              }}
             >
               Brand Panther
             </span>

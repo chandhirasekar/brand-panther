@@ -9,11 +9,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
             <a href="#home" className="flex items-center gap-3 group inline-flex mb-6">
-              <Image 
-                src="/brand-panther.png" 
-                alt="Brand Panther" 
-                width={100} 
-                height={100} 
+              <Image
+                src="/brand-panther.png"
+                alt="Brand Panther"
+                width={100}
+                height={100}
                 className="h-12 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform"
               />
               <span
@@ -42,7 +42,7 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-6">Contact</h4>
             <ul className="space-y-4 text-white/60">
               <li>brandpanther.ai@gmail.com</li>
-              <li>+91 90245 30301</li>
+              <li>+91 90254 30301</li>
               <li>Chennai, India</li>
             </ul>
           </div>

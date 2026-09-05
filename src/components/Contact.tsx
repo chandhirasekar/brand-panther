@@ -16,7 +16,7 @@ export function Contact() {
     setSubmitStatus("idle");
 
     const formData = new FormData(e.currentTarget);
-    formData.append("access_key", "9f64087a-cef2-49f0-819c-650c49637f6d"); 
+    formData.append("access_key", "9f64087a-cef2-49f0-819c-650c49637f6d");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -38,11 +38,11 @@ export function Contact() {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
-      
+
       if (submitStatus !== "error") {
-          setTimeout(() => {
-              setSubmitStatus("idle");
-          }, 3000);
+        setTimeout(() => {
+          setSubmitStatus("idle");
+        }, 3000);
       }
     }
   };
@@ -50,13 +50,13 @@ export function Contact() {
   return (
     <section id="contact" className="py-24 relative bg-secondary/50">
       <div className="container mx-auto px-6 md:px-12">
-        <SectionTitle 
-          title="Get In Touch" 
+        <SectionTitle
+          title="Get In Touch"
           subtitle="Contact Us"
         />
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
-          
+
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -79,17 +79,17 @@ export function Contact() {
                 </div>
               </a>
 
-              <a href="tel:+919024530301" className="flex items-center gap-4 group">
+              <a href="tel:+919025430301" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <Phone size={20} />
                 </div>
                 <div>
                   <p className="text-sm text-white/50 mb-1">Call Us</p>
-                  <p className="text-white font-medium group-hover:text-accent transition-colors">+91 90245 30301</p>
+                  <p className="text-white font-medium group-hover:text-accent transition-colors">+91 90254 30301</p>
                 </div>
               </a>
 
-              <a href="https://wa.me/919024530301" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+              <a href="https://wa.me/919025430301" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300">
                   <MessageCircle size={20} />
                 </div>
@@ -137,9 +137,9 @@ export function Contact() {
                 <label htmlFor="message" className="text-sm text-white/70">Message</label>
                 <textarea id="message" name="message" required rows={4} className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Tell us about your business goals..."></textarea>
               </div>
-              
+
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
-              
+
               <Button type="submit" disabled={isSubmitting} className="w-full mt-4 flex items-center justify-center gap-2">
                 {isSubmitting ? "Sending..." : "Send Message"} {!isSubmitting && <Send size={16} />}
               </Button>
@@ -149,7 +149,7 @@ export function Contact() {
                   <CheckCircle2 size={16} /> Message sent successfully! We'll get back to you soon.
                 </div>
               )}
-              
+
               {submitStatus === "error" && (
                 <div className="text-red-400 text-sm text-center mt-4 bg-red-400/10 py-2 px-4 rounded-lg">
                   Something went wrong. Please try again later.

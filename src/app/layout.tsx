@@ -55,6 +55,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`dark ${outfit.variable} ${gothic.variable} antialiased scroll-smooth`}>
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/chomsky" rel="stylesheet" />
+      </head>
       <body className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-white">
         {children}
       </body>
