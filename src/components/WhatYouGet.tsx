@@ -4,17 +4,62 @@ import { CheckCircle2, UserPlus, FolderOpen, Users, Magnet, Monitor, Store, Shop
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+interface GrowthPackageBox {
+  number: string;
+  title: string;
+  items: string[];
+}
+
 export function WhatYouGet() {
-  const features = [
-    { title: "AI Marketing Strategy", description: "A clear monthly plan based on your goals, audience, and competitors." },
-    { title: "AI Content Creation", description: "Posters, captions, and creatives made for your brand, every month." },
-    { title: "AI Reel Creation", description: "Short-form reels built to stop the scroll and earn saves and shares." },
-    { title: "Meta Ads Management", description: "Facebook & Instagram campaigns set up, tested, and optimised." },
-    { title: "Google Ads Support", description: "Search & display campaigns to catch people already looking for you." },
-    { title: "Lead Tracking", description: "Every enquiry captured and followed up, so nothing slips." },
-    { title: "Competitor Analysis", description: "We show you what's working for others in your space." },
-    { title: "WhatsApp Follow-up", description: "Leads reach you directly and get answered fast." },
-    { title: "Weekly Performance Reports", description: "Simple reports showing spend, leads, and cost per lead." },
+  const growthBoxes: GrowthPackageBox[] = [
+    {
+      number: "01",
+      title: "STRATEGY & REPORTING",
+      items: [
+        "Business audit",
+        "Competitor analysis",
+        "Strategy consultation",
+        "Weekly performance reports",
+      ],
+    },
+    {
+      number: "02",
+      title: "CONTENT & CREATIVE",
+      items: [
+        "Monthly content calendar",
+        "12 premium posters",
+        "2 standard reels",
+        "2 advanced AI reels (worth ₹1,500 each)",
+        "2 campaign reels",
+      ],
+    },
+    {
+      number: "03",
+      title: "SOCIAL MEDIA MANAGEMENT",
+      items: [
+        "Instagram",
+        "Facebook",
+        "WhatsApp Business",
+        "Google Business Profile",
+      ],
+    },
+    {
+      number: "04",
+      title: "PAID ADVERTISING",
+      items: [
+        "Meta Ads campaign management",
+        "Campaign review & optimisation",
+      ],
+    },
+    {
+      number: "05",
+      title: "CLIENT SUPPORT",
+      items: [
+        "Dedicated account manager",
+        "Lead generation strategy",
+        "Performance monitoring",
+      ],
+    },
   ];
 
   const rings = [
@@ -105,20 +150,20 @@ export function WhatYouGet() {
 
       <div className="container mx-auto px-6 md:px-12 relative z-20">
 
-        {/* Custom Title matching the exact screenshot */}
+        {/* Custom Title matching screenshot */}
         <div className="text-center mx-auto mb-16 flex flex-col items-center">
           <p
             data-aos="fade-up"
             className="text-accent uppercase tracking-widest text-xs md:text-sm font-bold mb-4"
           >
-            Everything your marketing needs, run by one team
+            Category, offer, and campaign performance.
           </p>
           <h2
             data-aos="fade-up"
             data-aos-delay="100"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 uppercase"
           >
-            What We Do
+            What We Do in the Growth Packages
           </h2>
           <div
             data-aos="fade-up"
@@ -127,26 +172,39 @@ export function WhatYouGet() {
           />
         </div>
 
-        {/* 3x3 Grid of features */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, idx) => (
+        {/* Growth package boxes grid */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {growthBoxes.map((box, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-[#0f0a18] border border-white/5 rounded-2xl p-6 flex flex-col items-start gap-3 hover:border-white/10 transition-colors shadow-lg shadow-black/50 group"
+              className="bg-[#0c0814]/90 border border-white/10 rounded-2xl p-7 md:p-8 flex flex-col justify-start hover:border-accent/40 transition-all duration-300 shadow-xl shadow-black/60 group"
             >
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <h4 className="text-lg font-medium text-white">
-                  {feature.title}
-                </h4>
+              {/* Card Header with red box number & uppercase title */}
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-[#ff3b3b] font-black text-2xl md:text-3xl tracking-wide font-mono">
+                  {box.number}
+                </span>
+                <h3 className="text-base md:text-lg font-bold text-white tracking-wider uppercase leading-snug">
+                  {box.title}
+                </h3>
               </div>
-              <p className="text-white/60 text-sm leading-relaxed pl-8">
-                {feature.description}
-              </p>
+
+              {/* Horizontal Divider */}
+              <div className="w-full h-[1px] bg-white/10 mb-6 group-hover:bg-white/20 transition-colors" />
+
+              {/* Bullet list of items */}
+              <ul className="space-y-3.5">
+                {box.items.map((item, iIdx) => (
+                  <li key={iIdx} className="flex items-start gap-3 text-white/90 text-sm md:text-base font-normal">
+                    <span className="text-[#ff3b3b] text-base leading-tight select-none shrink-0 mt-0.5">•</span>
+                    <span className="leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
@@ -154,3 +212,4 @@ export function WhatYouGet() {
     </section>
   );
 }
+

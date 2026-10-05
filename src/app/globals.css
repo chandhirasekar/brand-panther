@@ -15,7 +15,7 @@
   --color-muted: #A3A3A3;
   --color-card: #111111;
   --font-sans: 'Outfit', sans-serif;
-  --font-gothic: var(--font-gothic), serif;
+  --font-gothic: var(--font-gothic), 'UnifrakturMaguntia', 'Chomsky', serif;
 }
 
 body {

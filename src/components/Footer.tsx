@@ -18,6 +18,9 @@ export function Footer() {
               />
               <span
                 className="font-gothic text-2xl md:text-3xl tracking-wide text-white group-hover:text-accent transition-colors"
+                style={{
+                  fontFamily: "var(--font-gothic), 'UnifrakturMaguntia', 'Chomsky', serif",
+                }}
               >
                 Brand Panther
               </span>

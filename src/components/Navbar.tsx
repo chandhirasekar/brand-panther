@@ -52,10 +52,9 @@ export function Navbar() {
               priority
             />
             <span
-              className="text-2xl md:text-3xl tracking-wide text-white group-hover:text-accent transition-colors"
+              className="font-gothic text-2xl md:text-3xl tracking-wide  drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] group-hover:text-red-500 transition-colors"
               style={{
-                fontFamily: "'Chomsky', var(--font-gothic), serif",
-                textShadow: "0 0 15px rgba(255,255,255,0.2)"
+                fontFamily: "var(--font-gothic), 'UnifrakturMaguntia', 'Chomsky', serif",
               }}
             >
               Brand Panther

@@ -40,7 +40,7 @@ export default function Home() {
       <ClientReels />
       <WebsiteDesign />
       <CampaignDashboards />
-      <PackageIncludes />
+      {/* <PackageIncludes /> */}
       <Testimonials />
       <Contact />
       <Footer />
